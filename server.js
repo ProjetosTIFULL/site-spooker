@@ -60,7 +60,7 @@ app.post('/api/contact', async (req, res) => {
 })
 
 // SPA fallback
-app.get('*', (_, res) => {
+app.use((_, res) => {
   res.sendFile(join(__dirname, 'dist', 'index.html'))
 })
 
